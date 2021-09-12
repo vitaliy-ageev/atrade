@@ -1,0 +1,1978 @@
+.container_margin {
+    opacity: 1;
+}
+
+#hidden-calendar-events {
+    opacity: 0;
+    transition: all .2s linear 0s;
+}
+
+#hidden-calendar {
+    opacity: 0;
+    transition: all .2s linear 0s;
+}
+
+
+/* Economic Calendar */
+.economic_calendar {
+    width: 100%;
+
+}
+
+.economic_calendar_inner {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+/* Current Time */
+.current_time {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start;
+    margin-top: 25px;
+}
+
+
+/* Title */
+.current_time_title {
+    cursor: default;
+    font-family: "Open Sans", sans-serif;
+    font-size: 13px;
+    font-weight: 500;
+    color: #9B9B9B;
+    margin-right: 10px;
+    -webkit-text-size-adjust: 100%;
+}
+
+/* Value */
+.current_time_value {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+/* Data */
+.current_data {
+    cursor: default;
+    font-family: "Open Sans", sans-serif;
+    font-size: 13px;
+    font-weight: 600;
+    color: #4A4A4A;
+    -webkit-text-size-adjust: 100%;
+}
+
+/* Timezone */
+.current_timezone {
+    cursor: default;
+    font-family: "Open Sans", sans-serif;
+    font-size: 12px;
+    font-weight: 500;
+    color: #4A4A4A;
+    display: none;
+    -webkit-text-size-adjust: 100%;
+}
+
+/* Calendar Day */
+.economic_calendar_day_block {
+    width: 100%;
+    height: 55px;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start;
+    margin-top: 20px;
+    overflow: hidden;
+}
+
+.economic_calendar_day_block_inner {
+    width: 100%;
+    height: 110px;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start;
+    overflow-x: scroll;
+    overflow-y: hidden;
+}
+
+/* Calendar Day Item */
+.calendar_day_item {
+    cursor: default;
+    padding: 14px 8px;
+    border-left: 1px solid #ececec;
+    border-top: 1px solid #ececec;
+    border-bottom: 1px solid #ececec;
+    /*  transition: all .1s linear;*/
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+}
+
+.calendar_day_item_inner {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+.calendar_day_item:first-child {
+    border-top-left-radius: 3px;
+    border-bottom-left-radius: 3px;
+}
+
+.calendar_day_item:last-child {
+    border-right: 1px solid #ececec;
+    border-top-right-radius: 3px;
+    border-bottom-right-radius: 3px;
+}
+
+
+.calendar_day_item.active {
+    cursor: default;
+    background: #FAFAFA;
+    border-top: 1px solid #DEDEDE;
+    border-bottom: 1px solid #DEDEDE;
+    border-left: 1px solid #DEDEDE;
+    border-right: 1px solid #DEDEDE;
+    border-radius: 3px;
+}
+
+.calendar_day_item.active + .calendar_day_item {
+    border-left: 1px solid #fff;
+}
+
+/* Datetime */
+.calendar_day_item_datetime {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.calendar_day_item_datetime_nubmer {
+    font-family: "Open Sans", sans-serif;
+    font-size: 12px;
+    font-weight: 700;
+    color: #4A4A4A;
+    margin-right: 5px;
+    -webkit-text-size-adjust: 100%;
+}
+
+.calendar_day_item_datetime_month {
+    font-family: "Open Sans", sans-serif;
+    font-size: 12px;
+    font-weight: 700;
+    color: #4A4A4A;
+    margin-right: 5px;
+    -webkit-text-size-adjust: 100%;
+}
+
+.calendar_day_item_datetime_day {
+    font-family: "Open Sans", sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    color: #4A4A4A;
+    display: none;
+    -webkit-text-size-adjust: 100%;
+}
+
+/* Events */
+.calendar_day_item_events {
+    padding: 5px 10px;
+    border-radius: 3px;
+    background: #FFF7EB;
+    font-family: "Open Sans", sans-serif;
+    font-size: 11px;
+    font-weight: 700;
+    color: #4A4A4A;
+    margin-left: 10px;
+    display: none;
+    -webkit-text-size-adjust: 100%;
+}
+
+.calendar_day_item.active .calendar_day_item_events {
+    background: #F4F4F9;
+}
+
+.calendar_day_item_events.empty {
+    color: #828282;
+    background:#FFF9F1;
+}
+
+/* Ecomonic Events */
+.economic_events {
+    width: 100%;
+    margin-top: 5px;
+}
+
+.economic_events_inner {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+/* Economic Events Title */
+.economic_events_title {
+    cursor: default;
+    width: 100%;
+    height: 50px;
+    background: #fff;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-end;
+    box-sizing: border-box;
+    padding: 0 20px;
+}
+
+/* Left */
+.economic_events_title_left {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.economic_events_title_time {
+    width: 50px;
+    flex-shrink: 0;
+    font-family: 'Open Sans',  sans-serif;
+    font-size: 12px;
+    color: #A5A5A5;
+    font-weight: 400;
+    padding-bottom: 10px;
+    -webkit-text-size-adjust: 100%;
+}
+
+.economic_events_title_currency {
+    cursor: default;
+    width: 80px;
+    flex-shrink: 0;
+    font-family: 'Open Sans',  sans-serif;
+    font-size: 13px;
+    color: #A5A5A5;
+    font-weight: 400;
+    padding-bottom: 10px;
+    display: none;
+    -webkit-text-size-adjust: 100%;
+}
+
+.economic_events_title_importance {
+    cursor: default;
+    width: 70px;
+    flex-shrink: 0;
+    font-family: 'Open Sans',  sans-serif;
+    font-size: 13px;
+    color: #A5A5A5;
+    font-weight: 400;
+    padding-bottom: 10px;
+    display: none;
+    -webkit-text-size-adjust: 100%;
+}
+
+.economic_title_events {
+    cursor: default;
+    /*  width: 120px;*/
+    flex-grow: 1;
+    font-family: 'Open Sans',  sans-serif;
+    font-size: 12px;
+    color: #A5A5A5;
+    font-weight: 400;
+    padding-bottom: 10px;
+    -webkit-text-size-adjust: 100%;
+}
+
+/* Right */
+.economic_events_title_right {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.economic_events_title_now {
+    cursor: default;
+    width: 60px;
+    flex-shrink: 0;
+    white-space: nowrap;
+    text-align: center;
+
+    font-family: 'Open Sans',  sans-serif;
+    font-size: 12px;
+    color: #A5A5A5;
+    font-weight: 400;
+    padding-bottom: 10px;
+    display: none;
+    -webkit-text-size-adjust: 100%;
+}
+
+.economic_events_title_prognose {
+    cursor: default;
+    width: 60px;
+    flex-shrink: 0;
+    white-space: nowrap;
+    text-align: center;
+    font-family: 'Open Sans',  sans-serif;
+    font-size: 12px;
+    color: #A5A5A5;
+    font-weight: 400;
+    padding-bottom: 10px;
+    display: none;
+    -webkit-text-size-adjust: 100%;
+}
+
+.economic_events_title_before {
+    cursor: default;
+    width: 60px;
+    flex-shrink: 0;
+    white-space: nowrap;
+    text-align: center;
+    font-family: 'Open Sans',  sans-serif;
+    font-size: 12px;
+    color: #A5A5A5;
+    font-weight: 400;
+    padding-bottom: 10px;
+    display: none;
+    -webkit-text-size-adjust: 100%;
+}
+
+.economic_events_title_data {
+    cursor: default;
+    width: 60px;
+    flex-shrink: 0;
+    white-space: nowrap;
+    text-align: start;
+    font-family: 'Open Sans',  sans-serif;
+    font-size: 12px;
+    color: #A5A5A5;
+    font-weight: 400;
+    padding-bottom: 10px;
+    display: block;
+    -webkit-text-size-adjust: 100%;
+}
+
+/* Economic Events Calendar */
+.economic_events_calendar_block {
+    width: 100%;
+}
+.economic_events_calendar {
+    cursor: default;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    background-color: #F7F7F7;
+    border-radius: 4px;
+    font-family: 'Open Sans',  sans-serif;
+    font-size: 12px;
+    font-weight: 400;
+    height: 40px;
+    padding: 0 20px;
+    box-sizing: border-box;
+    -webkit-text-size-adjust: 100%;
+}
+
+.economic_events_calendar_day {
+    cursor: default;
+    font-family: 'Open Sans',  sans-serif;
+    font-size: 12px;
+    color: #333;
+    font-weight: 400;
+    margin-right: 5px;
+    -webkit-text-size-adjust: 100%;
+}
+
+.economic_events_calendar_data {
+    cursor: default;
+    font-family: 'Open Sans',  sans-serif;
+    font-size: 12px;
+    color: #333;
+    font-weight: 600;
+    -webkit-text-size-adjust: 100%;
+}
+
+/* Economic Events Calendar Row */
+.economic_events_calendar_row {
+    cursor: default;
+    width: 100%;
+    border-bottom: 1px solid #F5F5F9;
+    /*display: none;*/
+}
+
+.economic_events_calendar_row:nth-child(2){
+    display: block;
+}
+
+.economic_events_calendar_row_wrapper {
+    width: 100%;
+    min-height: 48px;
+    background-color: #fff;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    font-family: 'Open Sans',  sans-serif;
+    font-size: 13px;
+    font-weight: 400;
+    padding: 10px 20px;
+    box-sizing: border-box;
+    position: relative;
+    transition: all .2s linear;
+    -webkit-text-size-adjust: 100%;
+}
+
+/* Left */
+.economic_events_calendar_row_left {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+/* Time */
+.economic_events_calendarr_time {
+    width: 50px;
+    font-family: 'Open Sans',  sans-serif;
+    font-size: 12px;
+    color: #4a4a4a;
+    font-weight: 400;
+    flex-shrink: 0;
+    -webkit-text-size-adjust: 100%;
+}
+
+/* Currency Block*/
+.economic_events_calendar_row_left_container {
+    /*width: 130px;*/
+    margin-right: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+.economic_events_calendar_row_left_container_block {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start;
+    margin-bottom: 5px;
+}
+
+.economic_events_calendar_currency {
+    display: flex;
+    flex-direction: row;
+    flex-shrink: 0;
+    align-items: flex-start;
+    margin-right: 15px;
+}
+
+.economic_events_calendar_currency_img {
+    width: 24px;
+    height: 24px;
+    max-width: 24px;
+    max-height: 24px;
+    margin-right: 8px;
+    background-size: cover;
+    border-radius: 50%;
+    flex-shrink: 0;
+}
+
+.economic_events_calendar_currency_value {
+    font-family: 'Open Sans',  sans-serif;
+    font-size: 12px;
+    color: #4a4a4a;
+    font-weight: 400;
+    -webkit-text-size-adjust: 100%;
+}
+
+/* Impact */
+.economic_events_calendarr_impact {
+    display: flex;
+    flex-direction: row;
+    flex-shrink: 0;
+    height: 14px;
+    line-height: 1;
+    margin-top: 2px;
+}
+
+.economic_events_calendarr_impact.one .Economic__impactItem:first-child {
+    color: #FF5723;
+}
+
+.economic_events_calendarr_impact.two .Economic__impactItem:first-child,
+.economic_events_calendarr_impact.two .Economic__impactItem:nth-child(2) {
+    color: #FF5723;
+}
+
+.economic_events_calendarr_impact.three .Economic__impactItem {
+    color: #FF5723;
+}
+
+.Economic__impactItem {
+    width: 12px;
+    height: 14px;
+    margin-right: 6px;
+    color: #e1e1e1;;
+}
+
+.Economic__impactItem_active {
+    /*color: #FF5723;*/
+    /*  color: #FF6602;*/
+}
+
+/* Event */
+.economic_events_calendarr_event {
+    /*max-width: 300px;*/
+    flex-grow: 1;
+    font-family: 'Open Sans',  sans-serif;
+    font-size: 12px;
+    color: #4a4a4a;
+    font-weight: 400;
+    -webkit-text-size-adjust: 100%;
+}
+
+/* Report */
+.economic_events_calendarr_report {
+    margin-top: 5px;
+    display: none;
+}
+
+.economic_events_calendarr_report.active {
+    display: none;
+}
+
+.Economic__icon_report {
+    width: 18px;
+    height: 14px;
+    color: #ff5722;
+}
+
+/* Report Tooltip */
+#report_tooltip {
+    cursor: default;
+    position: relative;
+    opacity: 1;
+    z-index: 100;
+}
+
+#report_tooltip::before {
+    position: absolute;
+    bottom: 40px;
+    left: -40px;
+    border-radius: 4px;
+    z-index: 14;
+    content: attr(aria-label);
+    padding: 5px 10px;
+    text-transform: none;
+    box-shadow: 0 8px 16px -4px rgba(51,51,51,.2);
+    background: rgb(51,51,51, 0.95);
+    transition: all 0.1s ease;
+}
+
+#report_tooltip::before, #report_tooltip::after {
+    color: #fff;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 12px;
+    font-weight: 500;
+    opacity: 0;
+    pointer-events: none;
+    text-align: start;
+}
+
+#report:hover #report_tooltip::before, #report:hover #report_tooltip::after {
+    opacity: 1;
+    transition: all 0.1s ease;
+    text-align: start;
+}
+
+#report:hover #report_tooltip::before {
+    bottom: 30px;
+    left: -40px;
+}
+
+/* Report Mobile */
+.economic_events_calendarr_report_mobile {
+    margin-top: 1px;
+    display: none;
+}
+
+.economic_events_calendarr_report_mobile.active {
+    display: block;
+}
+
+.Economic__icon_report_mobile {
+    width: 18px;
+    height: 14px;
+    color: #ff5722;
+}
+
+
+/* Report Tooltip Mobile */
+#report_tooltip_mobile {
+    cursor: default;
+    position: relative;
+    opacity: 1;
+    z-index: 100;
+}
+
+#report_tooltip_mobile::before {
+    position: absolute;
+    bottom: 40px;
+    left: -40px;
+    border-radius: 4px;
+    z-index: 14;
+    content: attr(aria-label);
+    padding: 5px 10px;
+    text-transform: none;
+    box-shadow: 0 8px 16px -4px rgba(51,51,51,.2);
+    background: rgb(51,51,51, 0.95);
+    transition: all 0.1s ease;
+}
+
+#report_tooltip_mobile::before, #report_tooltip_mobile::after {
+    color: #fff;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 12px;
+    font-weight: 500;
+    opacity: 0;
+    pointer-events: none;
+    text-align: start;
+}
+
+#report_mobile:hover #report_tooltip_mobile::before, #report_mobile:hover #report_tooltip_mobile::after {
+    opacity: 1;
+    transition: all 0.1s ease;
+    text-align: start;
+}
+
+#report_mobile:hover #report_tooltip_mobile::before {
+    bottom: 30px;
+    left: -40px;
+}
+
+/* Speech */
+.economic_events_calendarr_speech {
+    display: none;
+    margin-top: 5px;
+}
+
+.economic_events_calendarr_speech.active {
+    display: none;
+}
+
+.Economic__icon_speech {
+    width: 18px;
+    height: 14px;
+    color: #ff5722;
+}
+
+/* Speech Tooltip */
+#speech_tooltip {
+    cursor: default;
+    position: relative;
+    opacity: 1;
+    z-index: 100;
+}
+
+#speech_tooltip::before {
+    position: absolute;
+    bottom: 40px;
+    left: -60px;
+    border-radius: 4px;
+    z-index: 14;
+    content: attr(aria-label);
+    padding: 5px 10px;
+    text-transform: none;
+    box-shadow: 0 8px 16px -4px rgba(51,51,51,.2);
+    background: rgb(51,51,51, 0.95);
+    transition: all 0.1s ease;
+}
+
+#speech_tooltip::before, #speech_tooltip::after {
+    color: #fff;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 12px;
+    font-weight: 500;
+    opacity: 0;
+    pointer-events: none;
+    text-align: start;
+}
+
+#speech:hover #speech_tooltip::before, #speech:hover #speech_tooltip::after {
+    opacity: 1;
+    transition: all 0.1s ease;
+    text-align: start;
+}
+
+#speech:hover #speech_tooltip::before {
+    bottom: 30px;
+    left: -60px;
+}
+
+/* Speech Mobile */
+.economic_events_calendarr_speech_mobile {
+    display: none;
+    margin-left: 5px;
+}
+
+.economic_events_calendarr_speech_mobile.active {
+    display: block;
+}
+
+.Economic__icon_speech_mobile {
+    width: 18px;
+    height: 14px;
+    color: #ff5722;
+}
+
+/* Speech Tooltip Mobile*/
+#speech_tooltip_mobile {
+    cursor: default;
+    position: relative;
+    opacity: 1;
+    z-index: 100;
+}
+
+#speech_tooltip_mobile::before {
+    position: absolute;
+    bottom: 40px;
+    left: -60px;
+    border-radius: 4px;
+    z-index: 14;
+    content: attr(aria-label);
+    padding: 5px 10px;
+    text-transform: none;
+    box-shadow: 0 8px 16px -4px rgba(51,51,51,.2);
+    background: rgb(51,51,51, 0.95);
+    transition: all 0.1s ease;
+}
+
+#speech_tooltip_mobile::before, #speech_tooltip_mobile::after {
+    color: #fff;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 12px;
+    font-weight: 500;
+    opacity: 0;
+    pointer-events: none;
+    text-align: start;
+}
+
+#speech_mobile:hover #speech_tooltip_mobile::before, #speech_mobile:hover #speech_tooltip_mobile::after {
+    opacity: 1;
+    transition: all 0.1s ease;
+    text-align: start;
+}
+
+#speech_mobile:hover #speech_tooltip_mobile::before {
+    bottom: 30px;
+    left: -60px;
+}
+
+/* Right */
+.economic_events_calendar_row_right {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.economic_events_calendarr_actual {
+    width: 60px;
+    text-align: center;
+    white-space: nowrap;
+    flex-shrink: 0;
+    font-family: 'Open Sans',  sans-serif;
+    font-size: 12px;
+    color: #4a4a4a;
+    font-weight: 400;
+    display: none;
+    -webkit-text-size-adjust: 100%;
+}
+
+.economic_events_calendarr_forecast {
+    width: 60px;
+    text-align: center;
+    white-space: nowrap;
+    flex-shrink: 0;
+    color: #4a4a4a;
+    font-family: 'Open Sans',  sans-serif;
+    font-size: 12px;
+    font-weight: 400;
+    display: none;
+    -webkit-text-size-adjust: 100%;
+}
+
+.economic_events_calendarr_forecast.down {
+    color: #e34828;
+    /*  color: #EA755D;*/
+}
+
+.economic_events_calendarr_forecast.up {
+    color: #45AF54;
+}
+
+.economic_events_calendarr_previos {
+    width: 60px;
+    text-align: center;
+    white-space: nowrap;
+    flex-shrink: 0;
+    font-family: 'Open Sans',  sans-serif;
+    font-size: 12px;
+    color: #4a4a4a;
+    font-weight: 400;
+    display: none;
+    -webkit-text-size-adjust: 100%;
+}
+
+/* Data Mobile */
+.economic_events_calendar_row_data_mobile {
+    cursor: default;
+    width: 60px;
+    display: block;
+    margin-top: -1px;
+}
+
+.economic_events_calendar_row_data_mobile_inner {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+/* Item */
+.economic_events_calendar_row_data_mobile_item {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.economic_events_calendar_row_data_mobile_item_title {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 12px;
+    color: #A1A1A1;
+    color: #9b9b9b;
+    font-weight: 500;
+    white-space: nowrap;
+    margin-right: 8px;
+    -webkit-text-size-adjust: 100%;
+}
+
+.economic_events_calendar_row_data_mobile_item_title_550px {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 12px;
+    color: #A1A1A1;
+    color: #9b9b9b;
+    font-weight: 500;
+    white-space: nowrap;
+    margin-right: 8px;
+    display: none;
+    -webkit-text-size-adjust: 100%;
+}
+
+
+.economic_events_calendar_row_data_mobile_item_value {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 12px;
+    color: #4a4a4a;
+    font-weight: 500;
+    white-space: nowrap;
+    -webkit-text-size-adjust: 100%;
+}
+
+.economic_events_calendar_row_data_mobile_item.forecast_down .economic_events_calendar_row_data_mobile_item_value {
+    color: #e34828;
+}
+
+.economic_events_calendar_row_data_mobile_item.forecast_up .economic_events_calendar_row_data_mobile_item_value {
+    color: #45AF54;
+}
+
+/* Economic Events Calendar Row Description */
+.economic_events_calendar_row_desc {
+    cursor: default;
+    font-family: 'Open Sans',  sans-serif;
+    font-size: 12px;
+    color: #4a4a4a;
+    font-weight: 500;
+    background: #FAFAFA;
+    padding: 15px 20px;
+    display: none;
+    -webkit-text-size-adjust: 100%;
+}
+
+/* Economic Calendar Row No Events */
+.economic_calendar_row_no_events {
+    width: 100%;
+    min-height: 60px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.economic_calendar_row_no_events_text {
+    cursor: default;
+    font-family: 'Open Sans',  sans-serif;
+    font-size: 14px;
+    color: #4a4a4a;
+    font-weight: 500;
+    -webkit-text-size-adjust: 100%;
+}
+
+/********************************************************************/
+/* Economic Calendar Designations */
+.economic_calendar_designations {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    margin-top: 20px;
+    margin-bottom: 30px;
+}
+
+/* Left */
+.economic_calendar_designations_left {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+/* Title */
+.economic_calendar_designations_legend_title {
+    cursor: default;
+    font-family: 'Open Sans',  sans-serif;
+    font-size: 14px;
+    color: #4a4a4a;
+    font-weight: 600;
+    margin-bottom: 15px;
+    -webkit-text-size-adjust: 100%;
+}
+
+/* Legend */
+.economic_calendar_designations_legend {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+/* Left*/
+.economic_calendar_designations_legend_left {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    margin-bottom: 20px;
+}
+
+/* Economic Calendar Designations Legend Item */
+.economic_calendar_designations_importance_item {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    margin-bottom: 12px;
+}
+
+.economic_calendar_designations_legend_importance_item_bg {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    margin-right: 7px;
+}
+
+.economic_calendar_designations_legend_importance_item_bg.one .Economic__impactItem:first-child {
+    color: #FF5723;
+}
+
+.economic_calendar_designations_legend_importance_item_bg.two .Economic__impactItem:first-child,
+.economic_calendar_designations_legend_importance_item_bg.two .Economic__impactItem:nth-child(2) {
+    color: #FF5723;
+}
+
+.economic_calendar_designations_legend_importance_item_bg.three .Economic__impactItem {
+    color: #FF5723;
+}
+
+/* Description */
+.economic_calendar_designations_importance_item_desc {
+    cursor: default;
+    font-family: 'Open Sans',  sans-serif;
+    font-size: 12px;
+    color: #4a4a4a;
+    font-weight: 500;
+    -webkit-text-size-adjust: 100%;
+}
+
+/* Right */
+.economic_calendar_designations_legend_right {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+.economic_calendar_designations_legend_right_L_block {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    margin-right: 40px;
+}
+
+/* Economic Calendar Designations Reporting */
+.economic_calendar_designations_reporting {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    margin-bottom: 12px;
+}
+
+/* Svg */
+.Economic__icon {
+    width: 12px;
+    height: 14px;
+    color: #ff5722;
+    margin-right: 7px;
+}
+
+.economic_calendar_designations_reporting_desc {
+    cursor: default;
+    font-family: 'Open Sans',  sans-serif;
+    font-size: 12px;
+    color: #4a4a4a;
+    font-weight: 500;
+    -webkit-text-size-adjust: 100%;
+}
+
+/* Economic Calendar Designations Speech */
+.economic_calendar_designations_speech {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    margin-bottom: 12px;
+}
+
+/* Svg */
+.Economic__icon {
+    width: 18px;
+    height: 14px;
+    color: #ff5722;
+    margin-right: 7px;
+}
+
+.economic_calendar_designations_speech_desc {
+    cursor: default;
+    font-family: 'Open Sans',  sans-serif;
+    font-size: 12px;
+    color: #4a4a4a;
+    font-weight: 500;
+    -webkit-text-size-adjust: 100%;
+}
+
+.economic_calendar_designations_legend_right_R_block {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    margin-top: -3px;
+}
+
+/* Item */
+.economic_calendar_designations_legend_right_R_item {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    margin-bottom: 12px;
+}
+
+.economic_calendar_designations_legend_right_R_item_title {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 12px;
+    color: #4a4a4a;
+    font-weight: 600;
+    white-space: nowrap;
+    margin-right: 8px;
+    -webkit-text-size-adjust: 100%;
+}
+
+.economic_calendar_designations_legend_right_R_item_value {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 12px;
+    color: #4a4a4a;
+    font-weight: 500;
+    white-space: nowrap;
+    margin-left: 10px;
+    -webkit-text-size-adjust: 100%;
+}
+
+/* !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! */
+/* Right */
+.economic_calendar_designations_right {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start;
+    margin-top: 20px;
+}
+
+/* About */
+.economic_calendar_designations_about {
+    cursor: default;
+    font-family: 'Open Sans',  sans-serif;
+    font-size: 12px;
+    color: #4a4a4a;
+    font-weight: 500;
+    -webkit-text-size-adjust: 100%;
+}
+
+.economic_calendar_designations_about_title {
+    cursor: default;
+    font-family: 'Open Sans',  sans-serif;
+    font-size: 12px;
+    color: #4a4a4a;
+    font-weight: 600;
+    -webkit-text-size-adjust: 100%;
+}
+
+/********************************************************************/
+/*  Адаптивная верстка для  Общих правил */
+
+/* Mobile & Table */
+/* Для ширины экрана от 320px до 1024px */
+@media (min-width: 300px) {
+    .left_title_text_mobile {
+        display: block;
+    }
+
+    .left_title_text {
+        display: none;
+    }
+}
+
+@media (min-width: 350px) {
+    .current_data {
+        margin-right: 10px;
+
+    }
+
+    .current_timezone {
+        display: block;
+        margin-right: 10px;
+    }
+}
+
+@media (min-width: 550px) {
+    .left_title_text_mobile {
+        display: none;
+    }
+
+    .left_title_text {
+        display: block;
+    }
+}
+
+@media (min-width: 480px) {
+
+}
+
+@media (min-width: 600px) {
+
+}
+
+
+@media (min-width: 840px) {
+
+}
+
+/* Notebook & PC */
+/* Для ширины экрана от 950px и более */
+@media (min-width: 950px) {
+    /* Current Time */
+    .current_time {
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: center;
+        margin-top: 40px;
+    }
+
+    .current_time_title {
+        font-size: 16px;
+    }
+
+    .current_time_value {
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: center;
+    }
+
+    .current_data {
+        font-size: 16px;
+        font-weight: 600;
+    }
+
+    .current_timezone {
+        font-size: 16px;
+    }
+
+}
+
+/* Для ширины экрана от 1280px и более */
+@media (min-width: 1280px) {
+
+}
+
+/* Для ширины экрана от 1440px и более */
+@media (min-width: 1440px) {
+
+}
+
+/* Для ширины экрана от 1824px и более */
+@media (min-width: 1824px) {
+
+}
+
+/********************************************************************/
+/*  Адаптивная верстка для Calendar Day */
+
+/* Mobile & Table */
+/* Для ширины экрана от 320px до 1024px */
+@media (min-width: 530px) {
+    /* Calendar Day */
+    .economic_calendar_day_block {
+        height: auto;
+        justify-content: space-between;
+        align-items: center;
+        overflow: auto;
+    }
+
+    .economic_calendar_day_block_inner {
+        height: auto;
+        overflow-x: auto;
+        overflow-y: auto;
+    }
+
+    /* Calendar Day Item */
+    .calendar_day_item {
+        width: 15%;
+        padding: 14px 0;
+    }
+
+    .calendar_day_item_datetime_nubmer {
+        font-size: 13px;
+    }
+
+    .calendar_day_item_datetime_month {
+        font-size: 13px;
+    }
+
+}
+
+@media (min-width: 600px)  {
+    .calendar_day_item_datetime_nubmer {
+        font-size: 14px;
+    }
+
+    .calendar_day_item_datetime_month {
+        font-size: 14px;
+    }
+}
+
+@media (min-width: 830px) {
+    /* Calendar Day Item */
+    .calendar_day_item {
+        align-items: flex-start;
+        padding: 20px 0;
+    }
+
+    .calendar_day_item_datetime {
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: center;
+        margin-bottom: 5px;
+        margin-left: 10px;
+    }
+
+    .calendar_day_item_datetime_nubmer {
+        font-size: 18px;
+    }
+
+    .calendar_day_item_datetime_month {
+        font-size: 15px;
+    }
+
+    .calendar_day_item_events {
+        font-size: 10px;
+        padding: 4px 10px;
+        display: block;
+    }
+}
+
+@media (min-width: 850px) {
+    .economic_calendar_day_block {
+        margin-top: 25px;
+    }
+
+
+    .calendar_day_item_datetime {
+        margin-left: 20px;
+    }
+
+    .calendar_day_item_events {
+        margin-left: 20px;
+    }
+}
+
+
+/* Notebook & PC */
+/* Для ширины экрана от 950px и более */
+@media (min-width: 950px) {
+    /* Calendar Day */
+    .economic_calendar_day_block {
+        margin-top: 40px;
+    }
+
+    .calendar_day_item_datetime_nubmer {
+        font-size: 20px;
+    }
+
+    .calendar_day_item_datetime_month {
+        font-size: 16px;
+    }
+
+    .calendar_day_item_datetime_day {
+        display: block;
+    }
+
+    .calendar_day_item_events {
+        font-size: 11px;
+        padding: 5px 10px;
+    }
+}
+
+@media (min-width: 1000px) {
+    .calendar_day_item {
+        cursor: pointer;
+    }
+
+    .calendar_day_item.active + .calendar_day_item {
+        border-left: 1px solid #DEDEDE;
+    }
+
+    .calendar_day_item.active + .calendar_day_item:not(:hover) {
+        border-left: 1px solid #fff;
+    }
+
+    .calendar_day_item:hover {
+        border-top: 1px solid #DEDEDE;
+        border-bottom: 1px solid #DEDEDE;
+        border-left: 1px solid #DEDEDE;
+        border-right: 1px solid #DEDEDE;
+        border-radius: 3px;
+    }
+
+    .calendar_day_item:hover + .calendar_day_item  {
+        border-left: 1px solid #ececec;
+        border-left: 1px solid #fff;
+    }
+}
+
+/* Для ширины экрана от 1440px и более */
+@media (min-width: 1440px) {
+
+}
+
+/* Для ширины экрана от 1824px и более */
+@media (min-width: 1824px) {
+
+}
+
+/********************************************************************/
+/*  Адаптивная верстка для Calendar Row */
+
+/* Mobile & Table */
+/* Для ширины экрана от 320px до 1024px */
+@media (min-width: 420px) {
+    .economic_events_title_time {
+        width: 60px;
+    }
+
+    .economic_events_calendarr_time {
+        width: 60px;
+    }
+}
+
+@media (min-width: 500px) {
+    .economic_events_calendarr_event {
+        width: 280px;
+    }
+}
+
+@media (min-width: 520px) {
+    .economic_events {
+        margin-top: 5px;
+    }
+
+    .economic_events_title_data {
+        width: 80px;
+        text-align: start;
+    }
+
+    .economic_events_calendar_row_data_mobile {
+        width: 80px;
+    }
+
+    .economic_events_calendar_row_data_mobile_item_title {
+        display: none;
+    }
+
+    .economic_events_calendar_row_data_mobile_item_title_550px {
+        display: block;
+    }
+}
+
+@media (min-width: 630px) {
+    .economic_events_title_now {
+        display: block;
+    }
+
+    .economic_events_title_prognose {
+        display: block;
+    }
+
+    .economic_events_title_before {
+        display: block;
+    }
+
+    .economic_events_title_data {
+        display: none;
+    }
+
+    .economic_events_calendar_row_left_container_block {
+        align-items: center;
+    }
+
+    .economic_events_calendar_currency {
+        align-items: center;
+    }
+
+    .economic_events_calendarr_impact {
+        margin-top: 0;
+    }
+
+    .economic_events_calendarr_actual {
+        display: block;
+    }
+
+    .economic_events_calendarr_forecast {
+        display: block;
+    }
+
+    .economic_events_calendarr_previos {
+        display: block;
+    }
+
+    .economic_events_calendar_row_data_mobile {
+        display: none;
+    }
+
+}
+
+@media (min-width: 650px) {
+    .economic_events_title_now {
+        width: 70px;
+    }
+
+    .economic_events_title_prognose {
+        width: 70px;
+    }
+
+    .economic_events_title_before {
+        width: 70px;
+    }
+
+
+    .economic_events_calendarr_actual {
+        width: 70px;
+    }
+
+    .economic_events_calendarr_forecast {
+        width: 70px;
+    }
+
+    .economic_events_calendarr_previos {
+        width: 70px;
+    }
+}
+
+@media (min-width: 700px) {
+    .economic_events_calendarr_event {
+        width: 330px;
+    }
+}
+
+@media (min-width: 740px) {
+    .economic_events_calendarr_event {
+        width: 370px;
+    }
+}
+
+@media (min-width: 760px) {
+    .economic_events_calendarr_event {
+        width: 390px;
+    }
+}
+
+@media (min-width: 780px) {
+
+
+    /* Economic Events Title */
+    .economic_events_title_time {
+        font-size: 13px;
+    }
+
+    .economic_events_title_currency {
+        display: block;
+    }
+
+    .economic_events_title_importance {
+        display: block;
+    }
+
+    .economic_title_events {
+        font-size: 13px;
+    }
+
+    .economic_events_calendarr_report {
+        margin-left: 10px;
+        margin-top: 3px;
+    }
+
+    .economic_events_calendarr_report_mobile.active {
+        display: none;
+    }
+
+    .economic_events_calendarr_report.active {
+        display: block;
+    }
+
+    .economic_events_calendarr_speech {
+        margin-left: 10px;
+        margin-top: 3px;
+    }
+
+    .economic_events_calendarr_speech_mobile.active {
+        display: none;
+    }
+
+    .economic_events_calendarr_speech.active {
+        display: block;
+    }
+
+    .economic_events_title_now {
+        font-size: 13px;
+        width: 80px;
+    }
+
+    .economic_events_title_prognose {
+        font-size: 13px;
+        width: 80px;
+    }
+
+    .economic_events_title_before {
+        font-size: 13px;
+        width: 80px;
+    }
+
+    .economic_events_title_data {
+        display: none;
+    }
+
+    /* Economic Events Calendar */
+    .economic_events_calendar {
+        font-size: 13px;
+    }
+
+    .economic_events_calendar_day {
+        font-size: 13px;
+    }
+
+    .economic_events_calendar_data {
+        font-size: 13px;
+    }
+
+    /* Economic Events Calendar Row */
+    .economic_events_calendar_row {
+        display: block;
+    }
+
+    .economic_events_calendar_row:last-child {
+        border-bottom: none;
+    }
+
+    .economic_events_calendar_row_wrapper {
+        align-items: center;
+    }
+
+    .economic_events_calendar_row_left {
+        align-items: center;
+    }
+
+    .economic_events_calendarr_time {
+        font-size: 13px;
+        color: #A1A1A1;
+    }
+
+    .economic_events_calendar_row_left_container {
+        width: auto;
+        margin-right: 0;
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: center;
+    }
+
+    .economic_events_calendar_row_left_container_block {
+        flex-direction: row;
+        justify-content: flex-start;
+        margin-bottom: 0;
+    }
+
+    .economic_events_calendar_currency {
+        width: 80px;
+        margin-right: 0;
+    }
+
+    .economic_events_calendar_currency_value {
+        font-size: 13px;
+    }
+
+    .economic_events_calendarr_impact {
+        width: 70px;
+    }
+
+    .economic_events_calendarr_event {
+        font-size: 13px;
+        width: auto;
+    }
+
+    .economic_events_calendarr_actual {
+        width: 80px;
+        font-size: 13px;
+    }
+
+    .economic_events_calendarr_forecast {
+        width: 80px;
+        font-size: 13px;
+    }
+
+    .economic_events_calendarr_previos {
+        width: 80px;
+        font-size: 13px;
+    }
+
+    /* Economic Events Calendar Row Description  */
+    .economic_events_calendar_row_desc {
+        font-size: 13px;
+        padding: 20px 20px;
+    }
+}
+
+@media (min-width: 830px) {
+    .economic_events {
+        margin-top: 10px;
+    }
+
+}
+
+@media (min-width: 850px) {
+    .economic_events {
+        margin-top: 15px;
+    }
+
+}
+
+/* Notebook & PC */
+/* Для ширины экрана от 950px и более */
+@media (min-width: 950px) {
+    .economic_events {
+        margin-top: 30px;
+    }
+}
+
+@media (min-width: 1000px) {
+    .economic_events_calendar_row {
+        cursor: pointer;
+    }
+
+    .economic_events_calendar_row_wrapper:not(.nodesc):hover {
+        background: #FAFAFA;
+    }
+
+    .economic_events_calendar_row_wrapper.nodesc {
+        cursor: default;
+    }
+    
+    .economic_events_calendar_row_desc {
+        cursor: pointer;
+    }
+}
+
+@media (min-width: 1280px) {
+
+}
+
+/********************************************************************/
+/*  Адаптивная верстка для Economic Calendar Designations */
+
+/* Mobile & Table */
+/* Для ширины экрана от 320px до 1024px */
+@media (min-width: 450px) {
+    /* Legend */
+    .economic_calendar_designations_legend {
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: flex-start;
+    }
+
+    /* Legend Left */
+    .economic_calendar_designations_legend_left {
+        width: 75%;
+        margin-bottom: 0;
+    }
+
+    /* Legend Right */
+    .economic_calendar_designations_legend_right {
+        width: 25%;
+        /*flex-wrap: wrap;*/
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+    }
+
+    .economic_calendar_designations_legend_right_L_block {
+        margin-bottom: 10px;
+    }
+
+
+}
+
+@media (min-width: 530px) {
+    .economic_calendar_designations_legend_left {
+        width: 80%;
+    }
+
+    .economic_calendar_designations_legend_right {
+        width: 20%;
+    }
+
+    .economic_calendar_designations_legend_right_R_block {
+        display: none;
+    }
+
+    .economic_calendar_designations_importance_item:last-child {
+        margin-bottom: 3px;
+    }
+}
+
+@media (min-width: 600px) {
+    .economic_calendar_designations {
+        margin-top: 30px;
+        margin-bottom: 40px;
+    }
+}
+
+
+@media (min-width: 780px) {
+    .economic_calendar_designations_importance_item_desc {
+        font-size: 13px;
+    }
+
+    .economic_calendar_designations_reporting_desc {
+        font-size: 13px;
+    }
+
+    .economic_calendar_designations_speech_desc {
+        font-size: 13px;
+    }
+
+    .economic_calendar_designations_about {
+        font-size: 13px;
+    }
+
+    .economic_calendar_designations_about_title {
+        font-size: 13px;
+    }
+}
+
+/* Notebook & PC */
+/* Для ширины экрана от 1040px и более */
+@media (min-width: 1040px) {
+    /* Economic Calendar Designations */
+    .economic_calendar_designations {
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: flex-start;
+        margin-top: 60px;
+        margin-bottom: 60px;
+    }
+
+    /* Left */
+    .economic_calendar_designations_left {
+        width: 49%;
+    }
+
+    /* Title */
+    .economic_calendar_designations_legend_title {
+        margin-bottom: 20px;
+    }
+
+    /* Legend */
+    .economic_calendar_designations_legend {
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: flex-start;
+    }
+
+    /* Legend Left */
+    .economic_calendar_designations_legend_left {
+        width: 80%;
+        margin-bottom: 0;
+    }
+
+    .economic_calendar_designations_importance_item {
+        margin-bottom: 5px;
+    }
+
+    .economic_calendar_designations_legend_importance_item_bg {
+        margin-right: 15px;
+        display: block;
+    }
+
+    /* Legend Right */
+    .economic_calendar_designations_legend_right {
+        width: 20%;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+    }
+
+    .economic_calendar_designations_legend_right_L_block {
+        margin-right: 0;
+    }
+
+    /* Economic Calendar Designations Reporting  */
+    .economic_calendar_designations_reporting {
+        margin-bottom: 5px;
+    }
+
+    .Economic__icon {
+        margin-right: 15px;
+    }
+
+    /* Economic Calendar Designations Speech */
+    .economic_calendar_designations_speech {
+
+    }
+
+    .Economic__icon {
+        margin-right: 15px;
+    }
+
+    /* Right */
+    .economic_calendar_designations_right {
+        width: 49%;
+        margin-top: 0;
+    }
+
+}
+
+@media (min-width: 1280px) {
+    .economic_calendar_designations_about {
+        font-size: 14px;
+    }
+
+    .economic_calendar_designations_about_title {
+        font-size: 14px;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,367 @@
+.main_content {
+    width: 100%;
+}
+
+.left_title {
+    justify-content: center;
+}
+
+.left_title_block {
+    justify-content: center;
+    align-items: center;
+}
+
+.left_title {
+    margin-top: 5px;
+}
+
+.left_title_text {
+    font-size: 24px;
+}
+
+/*********************************************************************/
+/* Feedback Page */
+.feedback_page {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Description */
+.feedback_page_description {
+    margin-top: -2px;
+    text-align: center;
+    max-width: 500px;
+    cursor: default;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 13px;
+    font-weight: 500;
+    color: #999b9c;
+    transition: all .2s ease-in-out;
+    margin-bottom: 30px;
+    -webkit-text-size-adjust: 100%;
+}
+
+/*!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!*/
+/* Form */
+.feedback_page_form {
+    width: 100%;
+    max-width: 650px;
+}
+
+/* Item */
+.feedback_page_form_item {
+    margin-bottom: 15px;
+    transition: all .1s linear;
+}
+
+/* Label */
+.feedback_page_form_item_label {
+    width: 100%;
+    min-width: 400px;
+    margin-bottom: 10px;
+    display: inline-block;
+    cursor: default;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 13px;
+    font-weight: 500;
+    color: #999;
+    white-space: nowrap;
+    -webkit-text-size-adjust: 100%;
+    transition: all .1s linear;
+}
+
+/* Input */
+.feedback_page_form_item_input {
+    width: 100%;
+    padding: 10px 10px;
+    border: 1px solid #e6e6e6;
+    border-radius: 3px;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 15px;
+    color: #4a4a4a;
+    margin: 0px;
+    outline: 0;
+    background: 0 0;
+    vertical-align: top;
+    -moz-user-select: none;
+    -khtml-user-select: none;
+    user-select: none;
+    -webkit-text-size-adjust: 100%;
+    transition: all .1s linear;
+}
+
+.feedback_page_form_item_input:focus {
+    border: 1px solid rgba(255, 87, 35, .5);
+    border: 1px solid #888;
+}
+
+/* Textarea */
+.feedback_page_form_item_textarea {
+    width: 100%;
+    height: 128px;
+    padding: 10px 10px;
+    border: 1px solid #e6e6e6;
+    border-radius: 3px;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 15px;
+    color: #4a4a4a;
+    margin: 0px;
+    outline: 0;
+    background: 0 0;
+    vertical-align: top;
+    -moz-user-select: none;
+    -khtml-user-select: none;
+    user-select: none;
+    -webkit-text-size-adjust: 100%;
+    transition: all .1s linear;
+}
+
+.feedback_page_form_item_textarea:focus {
+    border: 1px solid #888;
+}
+
+.feedback_page_form_item_textarea.error:focus {
+    border: 1px solid #ff0000;
+}
+
+.feedback_page_form_item_textarea.valid:focus {
+    border: 1px solid #22a053;
+}
+
+.feedback_page_form_item_desc {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start;
+
+    margin-top: 5px;
+    cursor: default;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 12px;
+    font-weight: 500;
+    color: #999b9c;
+    transition: all .2s ease-in-out;
+    -webkit-text-size-adjust: 100%;
+
+}
+
+.feedback_page_form_item_desc span {
+    margin-right: 5px;
+    -webkit-text-size-adjust: 100%;
+}
+
+/* Button Submit */
+.feedback_page_form_submit {
+    position: relative;
+    margin: 35px 0 20px 0;
+    -moz-user-select: none;
+    -khtml-user-select: none;
+    user-select: none;
+}
+
+.feedback_page_form_submit_button {
+    width: 100%;
+    padding: 15px 0;
+    cursor: pointer;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    color: #fff;
+    text-align: center;
+    background: rgba(45, 169, 140, 1);
+    border-radius: 2px;
+    outline: none;
+    border: none;
+    transition: all .1s linear;
+    -moz-user-select: none;
+    -khtml-user-select: none;
+    user-select: none;
+    -webkit-text-size-adjust: 100%;
+}
+
+.feedback_page_form_submit:hover .feedback_page_form_submit_button {
+    background: #29987E;
+}
+
+/* Error Validation */
+
+input.error {
+    border: 1px solid #ff0000;
+}
+
+textarea.error {
+    border: 1px solid #ff0000;
+}
+
+.feedback_page_form_item_input.error:focus {
+    border: 1px solid #ff0000;
+}
+
+label.error {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 13px;
+    font-weight: 500;
+    color: #ff0000;
+}
+
+/* Valid */
+input.valid {
+    border: 1px solid #22a053;
+}
+
+textarea.valid {
+    border: 1px solid #22a053;
+}
+
+.feedback_page_form_item_input.valid:focus {
+    border: 1px solid #22a053;
+}
+
+
+label.valid {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 13px;
+    font-weight: 500;
+    color: #22a053;
+}
+
+
+
+/********************************************************************/
+/*  Адаптивная верстка для Feedback Form - Общие правила */
+
+/* Mobile & Table */
+/* Для ширины экрана от 320px до 1024px */
+@media (min-width: 320px) {
+
+}
+
+/* Notebook & PC */
+/* Для ширины экрана от 1000px и более */
+/* Для ширины экрана от 1000px и более */
+@media (min-width: 1000px) {
+    .main_page {
+        width: 100%;
+        margin-top: 54px;
+
+    }
+
+    .main_page_inner {
+        width: 100%;
+    }
+
+    .left_title {
+        margin-top: 20px;
+    }
+
+    .left_title_text {
+        font-size: 32px;
+    }
+
+
+}
+
+/********************************************************************/
+/*  Адаптивная верстка для Feedback Page */
+
+/* Mobile & Table */
+/* Для ширины экрана от 320px до 1024px */
+@media (min-width: 710px) {
+    .left_title_text {
+        font-size:32px;
+    }
+
+    .feedback_page_description {
+        max-width: 550px;
+        font-size: 15px;
+        margin-top: 0;
+        margin-bottom: 40px;
+    }
+
+    .feedback_page_form {
+        margin-top: 15px;
+    }
+
+    .feedback_page_form_item {
+        margin-bottom: 30px;
+    }
+
+    .feedback_page_form_item_label {
+        font-size: 14px;
+    }
+
+    .feedback_page_form_item_input {
+        padding: 15px 10px;
+    }
+
+    .feedback_page_form_item_textarea {
+        padding: 20px 10px;
+    }
+
+    .feedback_page_form_item_desc {
+        align-items: center;
+        font-size: 13px;
+    }
+
+    .feedback_page_form_submit {
+        margin: 35px 0 100px 0;
+    }
+
+    .feedback_page_form_submit_button {
+        padding: 20px;
+        font-size: 15px;
+    }
+
+}
+
+
+
+/* Notebook & PC */
+/* Для ширины экрана от 1000px и более */
+@media (min-width: 1000px) {
+    .feedback_page_description {
+        color: #333;
+    }
+
+    .feedback_page_form_item:hover .feedback_page_form_item_input{
+        border: 1px solid #999;
+    }
+
+    .feedback_page_form_item:hover .feedback_page_form_item_textarea{
+        border: 1px solid #999;
+    }
+
+    .feedback_page_form_item:hover .feedback_page_form_item_input.valid {
+        border: 1px solid #22a053;
+    }
+
+    .feedback_page_form_item:hover .feedback_page_form_item_input.error {
+        border: 1px solid #ff0000;
+    }
+
+    .feedback_page_form_item:hover .feedback_page_form_item_textarea.valid {
+        border: 1px solid #22a053;
+    }
+
+    .feedback_page_form_item:hover .feedback_page_form_item_textarea.error {
+        border: 1px solid #ff0000;
+    }
+}
+
+/* Для ширины экрана от 1280px и более */
+@media (min-width: 1280px) {
+
+}
+
+/* Для ширины экрана от 1440px и более */
+@media (min-width: 1440px) {
+
+}
+
+/* Для ширины экрана от 1824px и более */
+@media (min-width: 1824px) {
+
+}

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="PhpIncludePathManager">
+    <include_path>
+      <path value="$PROJECT_DIR$/atrade/vendor/qiwi/bill-payments-php-sdk" />
+      <path value="$PROJECT_DIR$/atrade/vendor/gabordemooij/redbean" />
+      <path value="$PROJECT_DIR$/atrade/vendor/doctrine/lexer" />
+      <path value="$PROJECT_DIR$/atrade/vendor/curl/curl" />
+      <path value="$PROJECT_DIR$/atrade/vendor/vlucas/valitron" />
+      <path value="$PROJECT_DIR$/atrade/vendor/composer" />
+      <path value="$PROJECT_DIR$/atrade/vendor/swiftmailer/swiftmailer" />
+      <path value="$PROJECT_DIR$/atrade/vendor/egulias/email-validator" />
+      <path value="$PROJECT_DIR$/atrade/vendor/symfony/polyfill-mbstring" />
+      <path value="$PROJECT_DIR$/atrade/vendor/symfony/polyfill-php72" />
+      <path value="$PROJECT_DIR$/atrade/vendor/symfony/polyfill-intl-normalizer" />
+      <path value="$PROJECT_DIR$/atrade/vendor/symfony/polyfill-intl-idn" />
+      <path value="$PROJECT_DIR$/atrade/vendor/atrade/core" />
+      <path value="$PROJECT_DIR$/atrade/vendor/symfony/polyfill-iconv" />
+    </include_path>
+  </component>
+  <component name="PhpProjectSharedConfiguration" php_language_level="8.0">
+    <option name="suggestChangeDefaultLanguageLevel" value="false" />
+  </component>
+</project>

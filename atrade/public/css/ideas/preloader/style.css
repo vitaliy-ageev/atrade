@@ -1,0 +1,281 @@
+html.page_load {
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+
+body.page_load {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    overflow: hidden;
+}
+
+#receiving_signals {
+    opacity: 0;
+    transition: all .2s linear;
+}
+
+#rs_mobile {
+    opacity: 0;
+    transition: all .2s linear;
+}
+
+#rs_n {
+    opacity: 0;
+    transition: all .2s linear;
+}
+
+#signal_history {
+    opacity: 0;
+    transition: all .2s linear;
+}
+
+#latest_news_main {
+    opacity: 0;
+    transition: all .2s linear;
+
+}
+
+#latest_news_mobile_main {
+    opacity: 0;
+    transition: all .2s linear;
+}
+
+/* Preloader */
+.preloader {
+    width: 100%;
+    max-width: 1280px;
+    margin: 0 auto;
+    position: relative;
+    top: 0;
+    left: 0;
+    z-index: 50000;
+    background: #F4F4F4;
+}
+
+
+.preloader_inner {
+    position: absolute;
+    top: 5px;
+    left: 0;
+    width: 100%;
+    height: 3000px;
+    background: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.loader-container .loader {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+}
+
+
+.loader-container {
+    position: relative;
+    float: left;
+    width: 250px;
+    height: 250px;
+    margin-top: -10px;
+}
+
+.arc-rotate .loader {
+    width: 100px;
+    height: 100px;
+}
+
+.arc-rotate .loader .arc {
+    position: absolute;
+    border: 2px solid;
+    border-color: transparent rgba(45, 169, 140, 0.6) rgba(45, 169, 140, 0.6) rgba(45, 169, 140, 0.6);
+    border-radius: 50%;
+    margin: 32% 0 0 32%;
+    width: 36%;
+    height: 36%;
+    animation: single-arc-rotate 1s infinite linear;
+}
+
+@keyframes single-arc-rotate {
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes rotate {
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+
+/*******************************************************************/
+@media (min-width: 700px) {
+    .preloader_inner {
+        top: 5px;
+    }
+}
+
+@media (min-width: 1000px) {
+    .preloader_inner {
+        top: 0px;
+    }
+}
+
+@media (min-width: 1040px) {
+    .preloader {
+        max-width: 1000px;
+    }
+}
+
+@media (min-width: 1280px) {
+    .preloader {
+        max-width: 1150px;
+    }
+
+    .preloader_inner {
+        top: 0px;
+    }
+
+    .loader-container {
+        margin-top: 0;
+    }
+}
+
+@media (min-width: 1400px) {
+    .preloader {
+        max-width: 1260px;
+    }
+
+}
+
+
+/**********************************************************************************************************************************/
+.signal_modal_window.open {
+    background: rgba(0,0,0, 0.6);
+    display: block;
+}
+
+#preloader_modal {
+    display: none;
+    z-index: 1000000;
+}
+
+#preloader_modal.open {
+    display: block;
+}
+
+.signal_modal_window.open .signal_modal_window_inner {
+    display: none;
+
+}
+
+/* Preloader */
+.preloader_modal {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: 50000;
+}
+
+
+.preloader_modal_inner {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.loader-container-modal .loader-modal {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+}
+
+
+.loader-container-modal {
+    position: relative;
+    float: left;
+    width: 250px;
+    height: 250px;
+    margin-top: -10px;
+}
+
+.arc-rotate-modal .loader-modal {
+    width: 100px;
+    height: 100px;
+}
+
+.arc-rotate-modal .loader-modal .arc-modal {
+    position: absolute;
+    border: 2px solid;
+    /*border-color: transparent rgba(255, 255, 255, 1) rgba(255, 255, 255, 1) rgba(255, 255, 255, 1);*/
+    border-color: transparent rgba(255, 255, 255, 0.9) rgba(255, 255, 255, 0.9) rgba(255, 255, 255, 0.9);
+    border-radius: 50%;
+    margin: 32% 0 0 32%;
+    width: 36%;
+    height: 36%;
+    animation: single-arc-rotate-modal 1s infinite linear;
+}
+
+@keyframes single-arc-rotate-modal {
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes rotate-modal {
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.loader-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    z-index: 50000;
+    overflow: hidden;
+
+}
+
+.loader-container-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    /*background: rgba(0,0,0, 0.4);*/
+    z-index: 5000;
+}
+
+
+/*******************************************************************/
+@media (min-width: 700px) {
+    .preloader_modal_inner {
+        /*top: 120px;*/
+    }
+}
+
+
+
+/**********************************************************************************************************************************/
+
+
+
+
+

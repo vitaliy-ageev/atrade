@@ -1,0 +1,585 @@
+/* !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! */
+/* One Image Active */
+.one_image_active {
+    cursor: pointer;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 100020;
+    display: none;
+    overflow-y: hidden;
+    overflow-x: hidden;
+}
+
+.signal_modal_window.img_open_RS {
+    overflow: hidden;
+}
+
+.one_image_active.active {
+    position: fixed;
+    display: block;
+    z-index: 100020;
+}
+
+html.img_open_TA {
+    overflow: hidden;
+}
+
+body.img_open_TA {
+    overflow: scroll;
+
+}
+
+.header.img_open_TA {
+    z-index: 50000;
+    position: fixed;
+    top: 0;
+    right: 7.5px;
+}
+
+.subheader.img_open_TA {
+    position: absolute;
+    right: 7.5px;
+}
+
+.fixation.img_open_TA {
+    z-index: 0;
+    display: none;
+}
+
+.go_back_btn.img_open_TA {
+    z-index: 0;
+    opacity: 0;
+    display: none;
+}
+
+.one_image_active_inner {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-self: center;
+
+}
+
+.one_image_active_wrapper {
+    width: 100%;
+    height: auto;
+    margin: auto auto;
+    z-index: 1015;
+}
+
+.one_image_active_open_block {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    margin: auto auto;
+    z-index: 1015;
+    display: none;
+}
+
+.one_image_active_open_block.active {
+    display: block;
+}
+
+.one_image_active_open {
+    cursor: default;
+    width: 100%;
+    height: 100%;
+    z-index: 1015;
+    -moz-user-select: none;
+    -khtml-user-select: none;
+    user-select: none;
+    margin: auto auto;
+}
+
+.one_image_active_open_title {
+    cursor: zoom-in;
+    width: 100%;
+    text-align: center;
+    position: absolute;
+    bottom: 10px;
+    z-index: 1030;
+    display: none;
+    opacity: 0;
+    transition: all .2s linear;
+}
+
+.one_image_active_open_title_inner {
+    cursor: zoom-in;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.one_image_active_open_text {
+    cursor: zoom-in;
+    font-family: 'Open Sans',  sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    color: #fff;
+    background: rgba(0,0,0, 0.7);
+    border-radius: 8px;
+    padding: 10px 15px;
+    opacity: 1;
+    transition: all .2s linear;
+    -moz-user-select: none;
+    -khtml-user-select: none;
+    user-select: none;
+}
+
+.one_image_active_open_text.active {
+    opacity: 1;
+}
+/* Svg Close Icon */
+.one_image_active_open_close {
+    cursor: default;
+    width: 50px;
+    height: 50px;
+    fill: rgba(255,255,255, 0.8);
+    stroke: none !important;
+    stroke-width: 0 !important;
+    background: rgba(55,64,77,.5);
+    padding: 15px;
+    border-radius: 50%;
+    margin: auto;
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    z-index: 1015;
+    transition: all .1s linear;
+    -webkit-appearance: none;
+}
+
+.one_image_active_open_background {
+    cursor: default;
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1010;
+    background: rgba(0,0,0, 1);
+}
+
+/********************************************************************/
+/*  Адаптивная верстка для One Image Active */
+
+/* Mobile & Table */
+/* Для ширины экрана от 320px до 1024px */
+@media (min-width: 320px) and (max-width: 999px) and (orientation: portrait) {
+    .one_image_active {
+        position: relative;
+    }
+
+    /* Zoom */
+    .one_image_active.zoom .one_image_active_inner {
+        overflow-x: auto;
+        overflow-y: hidden;
+    }
+
+    .one_image_active.zoom .one_image_active_open_close_block_mobile {
+        display: none;
+    }
+
+    .one_image_active.zoom .one_image_active_wrapper {
+        width: 120%;
+        max-width: 120%;
+        height: auto;
+    }
+
+    .one_image_active.zoom .one_image_active_open_block {
+        width: 120%;
+        max-width: 120%;
+        height: auto;
+    }
+
+    .one_image_active.zoom .one_image_active_open {
+        width: 120%;
+        max-width: 120%;
+        height: auto;
+    }
+
+}
+
+@media (min-width: 320px) and (max-width: 840px) and (orientation: landscape) {
+    .one_image_active_wrapper {
+        width: auto;
+        max-width: 80%;
+        height: auto;
+        height: 100%;
+        max-height: 100%;
+    }
+
+    .one_image_active_open_block {
+        width: auto;
+        max-width: 100%;
+        height: auto;
+        height: 100%;
+    }
+
+    .one_image_active_open {
+        width: auto;
+        max-width: 100%;
+        height: auto;
+        height: 100%;
+    }
+
+    /* Zoom */
+    .one_image_active.zoom .one_image_active_inner {
+        overflow-x: auto;
+        overflow-y: auto;
+    }
+
+    .one_image_active.zoom .one_image_active_open_close_block_mobile {
+        display: none;
+    }
+
+    .one_image_active.zoom .one_image_active_wrapper {
+        width: 120%;
+        max-width: 120%;
+        height: auto;
+    }
+
+    .one_image_active.zoom .one_image_active_open_block {
+        width: 120%;
+        max-width: 120%;
+        height: auto;
+    }
+
+    .one_image_active.zoom .one_image_active_open {
+        width: 120%;
+        max-width: 120%;
+        height: auto;
+    }
+
+}
+
+@media (min-width: 700px) and (max-width: 999px) and (orientation: portrait) {
+    .one_image_active_wrapper {
+        width: auto;
+        max-width: 80%;
+        height: auto;
+        max-height: 100%;
+    }
+
+    .one_image_active_open_block {
+        width: auto;
+        max-width: 100%;
+        height: auto;
+    }
+
+    .one_image_active_open {
+        width: auto;
+        max-width: 100%;
+        height: auto;
+    }
+    
+    .one_image_active_open_background {
+        background: #f1f1f1;
+    }
+
+    /* Zoom */
+    .one_image_active.zoom .one_image_active_inner {
+        overflow-x: auto;
+        overflow-y: hidden;
+    }
+
+    .one_image_active.zoom .one_image_active_open_close_block_mobile {
+        display: none;
+    }
+
+
+    .one_image_active.zoom .one_image_active_wrapper {
+        width: 120%;
+        max-width: 120%;
+        height: auto;
+    }
+
+    .one_image_active.zoom .one_image_active_open_block {
+        width: 120%;
+        max-width: 120%;
+        height: auto;
+    }
+
+    .one_image_active.zoom .one_image_active_open {
+        width: 120%;
+        max-width: 120%;
+        height: auto;
+    }
+}
+
+@media (min-width: 830px) and (max-width: 999px) {
+    .one_image_active_wrapper {
+        width: auto;
+        max-width: 80%;
+        height: auto;
+        max-height: 100%;
+    }
+
+    .one_image_active_open_block {
+        width: auto;
+        max-width: 100%;
+        height: auto;
+    }
+
+    .one_image_active_open {
+        width: auto;
+        max-width: 100%;
+        height: auto;
+    }
+    
+    .one_image_active_open_background {
+        background: #f1f1f1;
+    }
+
+    /* Zoom */
+    .one_image_active.zoom .one_image_active_inner {
+        overflow-x: auto;
+        overflow-y: auto;
+    }
+
+    .one_image_active.zoom .one_image_active_open_close_block_mobile {
+        display: none;
+    }
+
+    .one_image_active.zoom .one_image_active_wrapper {
+        width: 110%;
+        max-width: 110%;
+        height: auto;
+    }
+
+    .one_image_active.zoom .one_image_active_open_block {
+        width: 110%;
+        max-width: 110%;
+        height: auto;
+    }
+
+    .one_image_active.zoom .one_image_active_open {
+        width: 110%;
+        max-width: 110%;
+        height: auto;
+    }
+}
+
+
+/* Notebook & PC */
+/* Для ширины экрана от 1000px и более */
+@media (min-width: 1000px) {
+
+    .one_image_active_inner {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-self: center;
+
+    }
+
+    .one_image_active_wrapper {
+        width: auto;
+        max-width: 80%;
+        height: auto;
+        max-height: 100%;
+        position: relative;
+    }
+
+    .one_image_active_open_block {
+        width: auto;
+        max-width: 100%;
+        height: auto;
+    }
+
+    .one_image_active_open {
+        cursor: zoom-in;
+        width: auto;
+        max-width: 100%;
+        height: auto;
+        border-radius: 2px;
+    }
+
+    .one_image_active_open_title {
+        display: block;
+    }
+
+    .one_image_active_open_block:hover .one_image_active_open_title {
+        bottom: 20px;
+        opacity: 1;
+    }
+
+    .one_image_active_open_close {
+        cursor: pointer;
+        display: block;
+    }
+
+    .one_image_active_open_close:hover {
+        fill: rgba(255,255,255, 1);
+        background-color: #37404d;
+    }
+
+    .one_image_active_open_background {
+        background: #f1f1f1;
+    }
+
+    /* Zoom */
+    .one_image_active.zoom .one_image_active_inner {
+        height: 100%;
+        max-height: 100%;
+        margin-top: 0;
+        overflow-x: hidden;
+        overflow-y: auto;
+    }
+
+    .one_image_active.zoom .one_image_active_open_title {
+        display: none;
+    }
+
+    .one_image_active.zoom .one_image_active_open_close {
+        display: none;
+    }
+
+
+    .one_image_active.zoom .one_image_active_wrapper {
+        width: 100%;
+        max-width: 100%;
+        height: auto;
+    }
+
+    .one_image_active.zoom .one_image_active_open_block {
+        width: 100%;
+        max-width: 100%;
+        height: auto;
+    }
+
+    .one_image_active.zoom .one_image_active_open {
+        cursor: zoom-out;
+        width: 100%;
+        max-width: 100%;
+        height: auto;
+        border-radius: 0;
+    }
+}
+
+
+
+@media (min-width: 1280px) {
+  .one_image_active_wrapper {
+    max-width: 70%;
+  }
+}
+
+@media (min-width: 1440px) {
+    .one_image_active_wrapper {
+        max-width: 80%;
+    }
+}
+
+
+/* Preloader */
+#preloader_signals {
+    display: none;
+    z-index: 1000000;
+}
+
+#preloader_signals.open {
+    display: block;
+}
+
+.preloader_signals {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: 50000;
+}
+
+
+.preloader_signals_inner {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.loader-container-signals .loader-signals {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+}
+
+
+.loader-container-signals {
+    position: relative;
+    float: left;
+    width: 250px;
+    height: 250px;
+}
+
+.arc-rotate-signals .loader-signals {
+    width: 100px;
+    height: 100px;
+}
+
+.arc-rotate-signals .loader-signals .arc-signals {
+    position: absolute;
+    border: 2px solid;
+    /*border-color: transparent rgba(255, 255, 255, 1) rgba(255, 255, 255, 1) rgba(255, 255, 255, 1);*/
+    border-color: transparent rgba(255, 255, 255, 0.9) rgba(255, 255, 255, 0.9) rgba(255, 255, 255, 0.9);
+    border-radius: 50%;
+    margin: 32% 0 0 32%;
+    width: 36%;
+    height: 36%;
+    animation: single-arc-rotate-signals 1s infinite linear;
+}
+
+@keyframes single-arc-rotate-signals {
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes rotate-signals {
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.loader-signals {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    z-index: 50000;
+    overflow: hidden;
+
+}
+
+.loader-container-signals {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0,0,0, 0.6);
+    z-index: 5000;
+}
+
+@media (min-width: 1000px) {
+    .preloader_signals {
+        position: relative;
+    }
+
+}

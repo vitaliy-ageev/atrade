@@ -1,0 +1,14 @@
+{
+  "autoload": {
+    "psr-4": {
+      "atrade\\": "vendor/atrade/core",
+      "app\\": "app"
+    }
+  } ,
+  "require": {
+    "gabordemooij/redbean": "dev-master",
+    "qiwi/bill-payments-php-sdk": "^0.1.2",
+    "vlucas/valitron": "^1.4",
+    "swiftmailer/swiftmailer": "^6.2"
+  }
+}

@@ -1,0 +1,54 @@
+version: '3'
+
+services:
+  apache-php:
+    build: .
+    container_name: atrade
+    volumes:
+    - ./atrade:/var/www/html
+    - ./atrade/xdebug.ini:/usr/local/etc/php/conf.d/xdebug.ini
+    ports:
+    - 81:80
+    depends_on:
+      - mysql
+      - composer
+    links:
+      - mysql
+      - composer
+
+
+  mysql:
+    image: mariadb:latest
+    container_name: atrad
+    restart: always
+    volumes:
+      - ./mysql:/var/lib/mysql
+    environment:
+      MYSQL_ALLOW_EMPTY_PASSWORD: 'no'
+      MYSQL_ROOT_PASSWORD: 123
+      MYSQL_USER: root
+      MYSQL_PASSWORD: 123
+
+
+  phpmyadmin:
+    image: phpmyadmin:latest
+    container_name: phpmyadmin
+    restart: always
+    ports:
+      - 82:80
+    depends_on:
+      - mysql
+    links:
+      - mysql
+    environment:
+      PMA_HOST: mysql
+      PMA_USER: root
+      PMA_PASSWORD: 123
+
+  composer:
+    image: composer
+    container_name: composer
+    volumes:
+    - ./atrade:/app
+    working_dir: /atrade
+

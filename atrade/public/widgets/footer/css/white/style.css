@@ -1,0 +1,558 @@
+.container_margin {
+    opacity: 1;
+}
+/*  Footer */
+.footer {
+    width: 100%;
+    z-index: 60000;
+    overflow: hidden;
+}
+
+.footer_inner {
+    width: 100%;
+    background: #F2F2F2;
+    padding-top: 34px;
+    padding-bottom: 20px;
+    z-index: 60000;
+}
+
+/* Social Networks */
+.social_nw {
+    width: 100%;
+    display: block;
+}
+
+.social_nw_inner {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-left: 6px;
+}
+
+.social_link {
+    margin-right: 15px;
+    text-decoration: none;
+}
+
+.social_link:last-child {
+    margin-right: 0;
+}
+
+/* Svg Icon Vk */
+.social_vk {
+    cursor: default;
+}
+
+#vk_1 {
+    width: 32px;
+    height: 32px;
+    fill: #AAAAAA;
+    transition: all .1s linear;
+}
+
+/* Svg Icon Fb */
+.social_fb {
+    cursor: pointer;
+}
+
+#fb_1 {
+    width: 32px;
+    height: 32px;
+    fill:#AAAAAA;
+    transition: all .1s linear;
+}
+
+#fb_1:hover  {
+    fill: #494949;
+}
+
+/* Svg Icon Twitter */
+.social_tw {
+    cursor: pointer;
+}
+
+#tw_1 {
+    width: 32px;
+    height: 32px;
+    fill:#AAAAAA;
+    transition: all .1s linear;
+}
+
+#tw_1:hover  {
+    fill: #494949;
+}
+/* Svg Icon Telegram */
+.social_tg_link {
+    cursor: default;
+}
+.social_nw_tg {
+    margin-right: 7px;
+}
+
+#tg_1 {
+    width: 21px;
+    height: 21px;
+    fill:#AAAAAA;
+    margin-bottom: 7px;
+    transition: all .1s linear;
+}
+
+/* Svg Icon Instagram */
+.social_inst {
+    cursor: default;
+}
+
+#inst_1 {
+    width: 32px;
+    height: 32px;
+    fill:#AAAAAA;
+    transition: all .1s linear;
+}
+
+/* Svg Icon Youtube */
+.social_ytb {
+    cursor: pointer;
+}
+
+#ytb_1 {
+    width: 32px;
+    height: 32px;
+    fill:#AAAAAA;
+    transition: all .1s linear;
+}
+
+#ytb_1:hover  {
+    fill: #494949;
+}
+
+/* Svg Icon Mail */
+.social_mail_link {
+    cursor: pointer;
+}
+
+#mail_1 {
+    width: 22px;
+    height: 22px;
+    fill: #AAAAAA;
+    margin-bottom: 7px;
+}
+
+.social_mail_link:hover #mail_1 {
+    fill: #494949;
+}
+
+/* Footer Navigation */
+.footer_nav {
+    width: 100%;
+    display: none;
+    margin-top: 10px;
+}
+
+.footer_nav_inner {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center
+}
+
+.footer_nav_link {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    color: #AAAAAA;
+    transition: all .1s linear;
+    margin-right: 15px;
+    text-decoration: none;
+}
+
+.footer_nav_link:last-child {
+    margin-right: 0;
+}
+
+/* Mailing Notifications */
+.footer_ml_notification {
+    width: 100%;
+    display: none;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+.footer_ml_notification_inner {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Mailin Notification Item */
+.footer_ml_notification_item {
+    cursor: default;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    background: #fff;
+    border-radius: 3px;
+    padding: 5px 15px;
+    margin-right: 20px;
+
+    -moz-user-select: none;
+    -khtml-user-select: none;
+    user-select: none;
+}
+
+
+.footer_ml_notification_item:last-child {
+    margin-right: 0;
+}
+
+/* Telegram */
+.social_nw_tg_mailing {
+    margin-right: 15px;
+}
+
+#mailing_tg_1 {
+    width: 23px;
+    height: 23px;
+    fill: #BEBEBE;
+    /*  margin-bottom: 7px;*/
+    transition: all .1s linear;
+}
+
+/* Vk */
+.social_vk_mailing {
+    margin-right: 15px;
+}
+
+#mailing_vk_1 {
+    width: 27px;
+    height: 27px;
+    fill: #BEBEBE;
+    transition: all .1s linear;
+}
+
+/* Mailin Notification Content */
+.footer_ml_notification_item_content {
+
+}
+
+.footer_ml_notification_item_subtitle {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 10px;
+    font-weight: 500;
+    color: #B8B8B8;
+    transition: all .1s linear;
+}
+
+.footer_ml_notification_item_text {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 13px;
+    font-weight: 600;
+    color: #AEAEAE;
+    transition: all .1s linear;
+    margin-top: -6px;
+}
+
+/* Footer Border */
+.footer_border {
+    width: 100%;
+    display: none;
+    border: .5px solid #E6E6E6;
+}
+
+.footer_border.last {
+    width: 3000px;
+    margin-left: -25px;
+    display: block;
+}
+
+/* Company Information */
+.footer_company_information {
+    width: 100%;
+    display: none;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.footer_company_information_inner {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer_company_information_text {
+    cursor:default;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 13px;
+    font-weight: 500;
+    color: #B1B1B1;
+    text-align: center;
+    transition: all .1s linear;
+    -webkit-text-size-adjust:100%;
+}
+
+/* Footer Mobile Navigation */
+.footer_mobile_navigation {
+    width: 100%;
+    display: block;
+    margin-bottom: 10px;
+}
+
+.footer_mobile_navigation_inner {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.footer_mobile_navigation_link {
+    cursor: default;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    color: #000000;
+    opacity: 0.4;
+    padding: 11px 0;
+    text-decoration: none;
+}
+
+/* Footer Last Block */
+.footer_last_block {
+    width: 100%;
+    margin-top: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Footer Company */
+.footer_company {
+    cursor: default;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.footer_company_text {
+    cursor:default;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 13px;
+    font-weight: 500;
+    color: #B1B1B1;
+    transition: all .1s linear;
+}
+
+
+.footer_company_text_link {
+    cursor: pointer;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 13px;
+    font-weight: 500;
+    color: #B1B1B1;
+    transition: all .1s linear;
+    text-decoration: none;
+}
+
+/* Footer Age Limit */
+.footer_age_limit {
+    cursor: default;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 11px;
+    font-weight: 500;
+    color: #B1B1B1;
+    padding: 0 4px;
+    background: #E0E0E0;
+    border-radius: 3px;
+    margin-left: 10px;
+}
+
+/* Footer Language */
+.footer_lang {
+    display: none;
+    text-decoration: none;
+}
+
+.footer_lang_inner {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.footer_lang {
+    cursor: default;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 13px;
+    font-weight: 500;
+    color: #B1B1B1;
+    transition: all .1s linear;
+}
+
+.footer_lang_reg {
+    cursor: default;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 13px;
+    font-weight: 600;
+    color: #AEAEAE;
+    margin-left: 5px;
+    transition: all .1s linear;
+}
+
+/********************************************************************/
+/*  Адаптивная верстка для Footer */
+
+/* Mobile & Table */
+/* Для ширины экрана от 320px до 1024px */
+@media (min-width: 590px) {
+
+    .footer_inner {
+        padding-top: 54px;
+    }
+
+    .social_nw_inner {
+        margin-left: 0;
+    }
+
+    .footer_nav {
+        display: block;
+    }
+
+    .footer_ml_notification {
+        display: block;
+    }
+
+    .footer_border {
+        display: block;
+    }
+
+    .footer_border.last {
+        width: 100%;
+        margin-left: 0;
+    }
+
+    .footer_last_block {
+        justify-content: space-between;
+    }
+
+    .footer_lang {
+        display: block;
+    }
+
+    .footer_mobile_navigation {
+        display: none;
+    }
+
+}
+
+/* Notebook & PC */
+/* Для ширины экрана от 1024px и более */
+@media (min-width: 850px) {
+    .social_vk {
+        cursor: pointer;
+    }
+
+    #vk_1:hover  {
+        fill: #494949;
+    }
+
+    .social_tg_link {
+        cursor: pointer;
+    }
+
+    .social_tg_link:hover #tg_1 {
+        fill: #494949;
+    }
+
+    .social_inst {
+        cursor: pointer;
+    }
+
+    #inst_1:hover  {
+        fill: #494949;
+    }
+
+    .footer_nav_link {
+        cursor: pointer;
+    }
+
+    .footer_nav_link:hover {
+        color: #494949;
+    }
+
+    .footer_ml_notification_item {
+        cursor: pointer;
+    }
+
+    .footer_ml_notification_item:hover #mailing_tg_1 {
+        fill: #7D7D7D;
+    }
+
+    .footer_ml_notification_item:hover #mailing_vk_1 {
+        fill: #7D7D7D;
+    }
+
+    .footer_ml_notification_item:hover .footer_ml_notification_item_subtitle {
+        color: #666666;
+    }
+
+    .footer_ml_notification_item:hover .footer_ml_notification_item_text {
+        color: #5C5C5C;
+    }
+
+    .footer_company_text_link {
+        cursor: pointer;
+    }
+
+    .footer_company_text_link:hover {
+        color: #565656;
+    }
+
+    .footer_lang_reg {
+        cursor: pointer;
+    }
+
+    .footer_lang_reg:hover {
+        color: #5E5E5E;
+    }
+
+    .footer_company_information {
+        display: block;
+    }
+}
+
+@media (min-width: 1024px) {
+
+}
+
+/* Для ширины экрана от 1280px и более */
+@media (min-width: 1280px) {
+
+}
+
+/* Для ширины экрана от 1440px и более */
+@media (min-width: 1440px) {
+
+}
+
+/* Для ширины экрана от 1824px и более */
+@media (min-width: 1824px) {
+
+}
+
+
+
+
+
+
+
+

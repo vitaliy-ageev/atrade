@@ -1,0 +1,123 @@
+html.page_load {
+    overflow: scroll;
+}
+
+body.page_load {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    overflow: hidden;
+}
+
+#calendar_loader {
+    opacity: 0;
+    transition: all .2s linear;
+}
+
+/* Preloader */
+.preloader {
+    width: 100%;
+    position: relative;
+    top: 0;
+    left: 0;
+    z-index: 50000;
+    background: #F4F4F4;
+}
+
+
+.preloader_inner {
+    position: absolute;
+    top: 210px;
+    margin: 0 auto;
+    width: 100%;
+    max-width: 1280px;
+    height: 300px;
+    background: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.loader-container .loader {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+}
+
+
+.loader-container {
+    position: relative;
+    float: left;
+    width: 250px;
+    height: 250px;
+    margin-top: -70px;
+}
+
+.arc-rotate .loader {
+    width: 100px;
+    height: 100px;
+}
+
+.arc-rotate .loader .arc {
+    position: absolute;
+    border: 2px solid;
+    border-color: transparent rgba(45, 169, 140, 0.6) rgba(45, 169, 140, 0.6) rgba(45, 169, 140, 0.6);
+    border-radius: 50%;
+    margin: 32% 0 0 32%;
+    width: 36%;
+    height: 36%;
+    animation: single-arc-rotate 1s infinite linear;
+}
+
+@keyframes single-arc-rotate {
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes rotate {
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+
+/*******************************************************************/
+@media (min-width: 830px) {
+    .preloader_inner {
+        top: 260px;
+    }
+}
+
+@media (min-width: 850px) {
+    .preloader_inner {
+        top: 270px;
+    }
+}
+
+@media (min-width: 950px) {
+    .preloader_inner {
+        top: 330px;
+    }
+}
+
+@media (min-width: 1000px) {
+    .preloader_inner {
+        top: 310px;
+    }
+
+    .loader-container {
+        /*margin-top: -40px;*/
+    }
+}
+
+
+
+
+
+
